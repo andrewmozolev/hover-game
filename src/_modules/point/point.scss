@@ -1,0 +1,27 @@
+// chest styles
+
+[class^='point'] {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: violet;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    top: -1px;
+    background-color: #fff;
+    transform: scale(0);
+    border-radius: 50%;
+    transition: all 0.3s ease-out;
+    transform-origin: center;
+  }
+}

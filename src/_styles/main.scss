@@ -1,0 +1,29 @@
+// Normalize Styles
+@import 'node_modules/normalize.css/normalize';
+
+// Import Modules
+@import '../_modules/link/link';
+@import '../_modules/level1/level1';
+@import '../_modules/point/point';
+
+// Box sizing partial styles:
+// Apply a natural box layout model to all elements
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.game {
+  position: relative;
+  margin: 0 auto;
+  width: 1000px;
+  height: 600px;
+  border: 1px solid #000;
+}

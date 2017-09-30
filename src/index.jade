@@ -1,0 +1,15 @@
+extends _layouts/base
+
+include _modules/link/link
+include _modules/point/point
+include _modules/level1/level1
+
+block content
+  .container
+    +pointInputs
+
+
+    .title HoverGame
+    .game
+      +level1('level1')
+      //+level2('level2')

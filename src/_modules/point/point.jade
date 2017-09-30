@@ -1,0 +1,26 @@
+mixin point(pointName, x, y)
+  label(class=pointName, for=pointName, style={left:x + 'px', top:y + 'px'})
+  style
+    != 'input[name=\'' + pointName + '\'][value=\'1\']:checked ~ .game [class^=\'' + pointName + '\']::after {'
+    !=  'transform: scale(1);'
+    != '}'
+
+mixin pointInput(pointName)
+  input(type='radio', name=pointName, value=0, checked)
+  input(type='radio', name=pointName, value=1, id=pointName)
+
+mixin pointInputs
+  each level, levelIndex in site.data.levels
+    each val, index in level.points
+      +pointInput('point' + levelIndex + (index + 1))
+
+mixin points(num)
+  each val, index in site.data.levels[num].points
+    +point('point'+ num + (index + 1), val.x, val.y)
+  style
+    each val, index in site.data.levels[num].points
+      != 'input[name=\'point'+ num + (index + 1) + '\'][value=\'1\']:checked ~'
+
+    !='.game {'
+    != 'background: #f00'
+    !='}'
