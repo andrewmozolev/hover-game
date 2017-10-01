@@ -53,7 +53,7 @@ input {
     border: 30px solid transparent;
     border-bottom-color: #999;
     left: calc(50% - 30px);
-    top: calc(100% - 40px);
+    top: calc(100% - 20px);
     pointer-events: none;
     transition: all 0.3s;
     animation-name: bounce;
@@ -78,4 +78,12 @@ input {
   margin-top: 10px;
   margin-bottom: 10px;
   color: #333;
+
+  @media (max-width: 1439px) {
+    display: none;
+  }
+
+  @media (max-height: 820px) {
+    display: none;
+  }
 }
