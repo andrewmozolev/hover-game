@@ -5,4 +5,4 @@ tmp
 .grunt
 .DS_Store
 *.xml
-.idea/vcs.xml
+.idea/
