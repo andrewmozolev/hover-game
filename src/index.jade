@@ -1,15 +1,23 @@
 extends _layouts/base
 
-include _modules/link/link
+include _modules/level/level
 include _modules/point/point
-include _modules/level1/level1
+include _modules/result/result
+include _modules/welcome/welcome
+
 
 block content
   .container
+    input(class='setting-input', id='settings', type='checkbox', value=0)
     +pointInputs
-
-
-    .title HoverGame
+    .game-title
+      != '<span>h</span><label class="settings-label" for="settings">o</label>verGame'
     .game
-      +level1('level1')
-      //+level2('level2')
+      each val, index in site.data.levels
+        - var isLastLevel = false;
+        - var i = index;
+        if index === site.data.levels.length - 1
+          - isLastLevel = true;
+        +level(i, isLastLevel)
+
+    +welcome

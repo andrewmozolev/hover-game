@@ -1,0 +1,39 @@
+mixin level(index, isLastLevel)
+  - var i = index;
+  - var levelClass = 'level' + i;
+  div(class=levelClass)
+    each block, blockIndex in site.data.levels[i].blocks
+      -
+        var blockClass = 'block' + blockIndex;
+        var block = block;
+        var style = {
+          width: block.width,
+          height: block.height
+        };
+        if (block.top) {
+          style.top = block.top;
+        }
+        if (block.left) {
+          style.left = block.left;
+        }
+        if (block.right) {
+          style.right = block.right;
+        }
+        if (block.bottom) {
+          style.bottom = block.bottom;
+        }
+
+      div(class=blockClass, style=style)
+
+    +points(i)
+
+    .results
+      .title Game Over
+      a.restart(href='/') restart
+    .results-good
+      if isLastLevel
+        .title Well done!<br> You completed all levels!
+        a.restart(href='/') restart
+      else
+        .title!= 'level ' + i + ' complete!'
+        +resultLabel('result' + i)

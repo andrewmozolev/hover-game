@@ -8,8 +8,8 @@
   height: 30px;
   border-radius: 50%;
   background: violet;
-  cursor: pointer;
   transition: all 0.3s ease-out;
+  cursor: $cursorCircleHover;
 
   &::after {
     content: '';
@@ -23,5 +23,6 @@
     border-radius: 50%;
     transition: all 0.3s ease-out;
     transform-origin: center;
+    cursor: $cursorCircle;
   }
 }

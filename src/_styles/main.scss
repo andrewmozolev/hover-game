@@ -1,10 +1,14 @@
 // Normalize Styles
 @import 'node_modules/normalize.css/normalize';
 
+$cursorCircle: url('/images/circle-gray.png') 10 10, crosshair;
+$cursorCircleHover: url('/images/circle-dark-gray.png') 10 10, crosshair;
+
 // Import Modules
-@import '../_modules/link/link';
-@import '../_modules/level1/level1';
+@import '../_modules/level/level';
 @import '../_modules/point/point';
+@import '../_modules/result/result';
+@import '../_modules/welcome/welcome';
 
 // Box sizing partial styles:
 // Apply a natural box layout model to all elements
@@ -16,8 +20,25 @@
   box-sizing: border-box;
 }
 
+html {
+  cursor: $cursorCircle;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
+}
+
+input {
+  display: none;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
 
 .game {
@@ -25,5 +46,36 @@ body {
   margin: 0 auto;
   width: 1000px;
   height: 600px;
-  border: 1px solid #000;
+
+  &::after {
+    content: '';
+    position: absolute;
+    border: 30px solid transparent;
+    border-bottom-color: #999;
+    left: calc(50% - 30px);
+    top: calc(100% - 40px);
+    pointer-events: none;
+    transition: all 0.3s;
+    animation-name: bounce;
+    animation-duration: 0.4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+  }
+
+  &:hover::after {
+    border-bottom-color: transparent;
+  }
+}
+
+.settings-label {
+  cursor: $cursorCircleHover;
+}
+
+.game-title {
+  font-size: 36px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #333;
 }

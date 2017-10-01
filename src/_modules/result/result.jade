@@ -1,0 +1,6 @@
+mixin resultInput(resultName)
+  input(type='radio', name=resultName, value=0, checked)
+  input(type='radio', name=resultName, value=1, id=resultName)
+
+mixin resultLabel(resultName)
+  label(class=resultName, for=resultName) next
