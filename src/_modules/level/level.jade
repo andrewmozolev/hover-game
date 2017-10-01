@@ -29,11 +29,11 @@ mixin level(index, isLastLevel)
 
     .results
       .title Game Over
-      a.restart(href='./') restart
+      a.restart(href='./index.html') restart
     .results-good
       if isLastLevel
         .title Well done!<br> You completed all levels!
-        a.restart(href='./') restart
+        a.restart(href='./index.html') restart
       else
         .title!= 'level ' + i + ' complete!'
         +resultLabel('result' + i)
