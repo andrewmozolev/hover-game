@@ -4,14 +4,18 @@ include _modules/level/level
 include _modules/point/point
 include _modules/result/result
 include _modules/welcome/welcome
+include _modules/gameover/gameover
+include _modules/completed/completed
+
 
 
 block content
   .container
     input(class='setting-input', id='settings', type='checkbox', value=0)
     +pointInputs
-    .game-title
-      != '<span>h</span><label class="settings-label" for="settings">o</label>verGame'
+    .left-column
+      .game-title
+        != '<span>h</span><label class="settings-label" for="settings">o</label>verGame'
     .game
       each val, index in site.data.levels
         - var isLastLevel = false;

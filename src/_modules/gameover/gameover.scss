@@ -1,0 +1,44 @@
+// gameover styles
+.gameover {
+  display: none;
+  background-color: white;
+  position: absolute;
+  left: -310px;
+  right: -10px;
+  top: 0;
+  bottom: -300px;
+  z-index: 1000;
+
+  &:hover {
+    display: block;
+  }
+
+  .setting-input:not(:checked) ~ .game [class^='block']:hover ~ & {
+    display: block;
+  }
+
+  .restart {
+    position: absolute;
+    top: 650px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #333;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: 700;
+    cursor: $cursorCircleHover;
+  }
+
+  .title {
+    position: absolute;
+    font-size: 150px;
+    text-align: center;
+    width: 100%;
+    top: 300px;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #333;
+  }
+}

@@ -9,6 +9,8 @@ $cursorCircleHover: url('../images/circle-dark-gray.png') 10 10, crosshair;
 @import '../_modules/point/point';
 @import '../_modules/result/result';
 @import '../_modules/welcome/welcome';
+@import '../_modules/gameover/gameover';
+@import '../_modules/completed/completed';
 
 // Box sizing partial styles:
 // Apply a natural box layout model to all elements
@@ -26,7 +28,7 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
-  min-height: 700px;
+  min-height: 800px;
 }
 
 input {
@@ -42,11 +44,23 @@ input {
   }
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  min-width: 1300px;
+}
+
+.left-column {
+  border-left: 1px solid #999;
+  width: 300px;
+  flex-shrink: 0;
+}
+
 .game {
   position: relative;
-  margin: 0 auto;
   width: 1000px;
   height: 600px;
+  flex-shrink: 0;
 
   &::after {
     content: '';
@@ -79,12 +93,13 @@ input {
   margin-top: 10px;
   margin-bottom: 10px;
   color: #333;
+  flex-shrink: 0;
 
-  @media (max-width: 1439px) {
-    display: none;
-  }
-
-  @media (max-height: 820px) {
-    display: none;
-  }
+  //@media (max-width: 1439px) {
+  //  display: none;
+  //}
+  //
+  //@media (max-height: 820px) {
+  //  display: none;
+  //}
 }

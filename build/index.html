@@ -65,7 +65,9 @@
     <input type="radio" name="point211" value="1" id="point211">
     <input type="radio" name="result2" value="0" checked>
     <input type="radio" name="result2" value="1" id="result2">
-    <div class="game-title"><span>h</span><label class="settings-label" for="settings">o</label>verGame
+    <div class="left-column">
+      <div class="game-title"><span>h</span><label class="settings-label" for="settings">o</label>verGame
+      </div>
     </div>
     <div class="game">
       <div class="level0">
@@ -78,20 +80,20 @@
         <div style="width:250px;height:20px;top:300px;left:0" class="block6"></div>
         <div style="width:240px;height:20px;top:300px;right:380px" class="block7"></div>
         <label for="point00" style="left:485px;top:150px" class="point00"></label>
-        <style>input[name='point00'][value='1']:checked ~ .game [class^='point00']::after {transform: scale(1);}
+        <style>input[name='point00'][value='1']:checked ~ .game [class='point00']::after {transform: scale(1);}
         </style>
         <label for="point01" style="left:80px;top:440px" class="point01"></label>
-        <style>input[name='point01'][value='1']:checked ~ .game [class^='point01']::after {transform: scale(1);}
+        <style>input[name='point01'][value='1']:checked ~ .game [class='point01']::after {transform: scale(1);}
         </style>
         <label for="point02" style="left:900px;top:440px" class="point02"></label>
-        <style>input[name='point02'][value='1']:checked ~ .game [class^='point02']::after {transform: scale(1);}
+        <style>input[name='point02'][value='1']:checked ~ .game [class='point02']::after {transform: scale(1);}
         </style>
-        <style>input[name='point00'][value='1']:checked ~input[name='point01'][value='1']:checked ~input[name='point02'][value='1']:checked ~input[name='result0'][value='1']:checked ~.game .level0{display: none!important;}input[name='point00'][value='1']:checked ~input[name='point01'][value='1']:checked ~input[name='point02'][value='1']:checked ~input[name='result0'][value='1']:checked ~.game .level1{display: block;}input[name='point00'][value='1']:checked ~input[name='point01'][value='1']:checked ~input[name='point02'][value='1']:checked ~input[name='result0'][value='0']:checked ~.game .level0 .results-good {display: block;}input[name='point00'][value='1']:checked ~input[name='point01'][value='1']:checked ~input[name='point02'][value='1']:checked ~input[name='result0'][value='1']:checked ~.game .level0 .results-good {display: none;}
+        <style>input[name='point00'][value='1']:checked ~input[name='point01'][value='1']:checked ~input[name='point02'][value='1']:checked ~input[name='result0'][value='1']:checked ~.game .level0{display: none!important;}input[name='point00'][value='1']:checked ~input[name='point01'][value='1']:checked ~input[name='point02'][value='1']:checked ~input[name='result0'][value='1']:checked ~.game .level1{display: block;}input[name='point00'][value='1']:checked ~input[name='point01'][value='1']:checked ~input[name='point02'][value='1']:checked ~input[name='result0'][value='0']:checked ~.game .level0 .completed {display: block;}input[name='point00'][value='1']:checked ~input[name='point01'][value='1']:checked ~input[name='point02'][value='1']:checked ~input[name='result0'][value='1']:checked ~.game .level0 .completed {display: none;}
         </style>
-        <div class="results">
+        <div class="gameover">
           <div class="title">Game Over</div><a href="./index.html" class="restart">restart</a>
         </div>
-        <div class="results-good">
+        <div class="completed">
           <div class="title">level 0 complete!</div>
           <label for="result0" class="result0">next</label>
         </div>
@@ -117,26 +119,26 @@
         <div style="width:120px;height:60px;top:170px;left:440px" class="block17"></div>
         <div style="width:20px;height:120px;top:350px;left:490px" class="block18"></div>
         <label for="point10" style="left:80px;top:80px" class="point10"></label>
-        <style>input[name='point10'][value='1']:checked ~ .game [class^='point10']::after {transform: scale(1);}
+        <style>input[name='point10'][value='1']:checked ~ .game [class='point10']::after {transform: scale(1);}
         </style>
         <label for="point11" style="left:890px;top:80px" class="point11"></label>
-        <style>input[name='point11'][value='1']:checked ~ .game [class^='point11']::after {transform: scale(1);}
+        <style>input[name='point11'][value='1']:checked ~ .game [class='point11']::after {transform: scale(1);}
         </style>
         <label for="point12" style="left:120px;top:410px" class="point12"></label>
-        <style>input[name='point12'][value='1']:checked ~ .game [class^='point12']::after {transform: scale(1);}
+        <style>input[name='point12'][value='1']:checked ~ .game [class='point12']::after {transform: scale(1);}
         </style>
         <label for="point13" style="left:850px;top:410px" class="point13"></label>
-        <style>input[name='point13'][value='1']:checked ~ .game [class^='point13']::after {transform: scale(1);}
+        <style>input[name='point13'][value='1']:checked ~ .game [class='point13']::after {transform: scale(1);}
         </style>
         <label for="point14" style="left:485px;top:120px" class="point14"></label>
-        <style>input[name='point14'][value='1']:checked ~ .game [class^='point14']::after {transform: scale(1);}
+        <style>input[name='point14'][value='1']:checked ~ .game [class='point14']::after {transform: scale(1);}
         </style>
-        <style>input[name='point10'][value='1']:checked ~input[name='point11'][value='1']:checked ~input[name='point12'][value='1']:checked ~input[name='point13'][value='1']:checked ~input[name='point14'][value='1']:checked ~input[name='result1'][value='1']:checked ~.game .level1{display: none!important;}input[name='point10'][value='1']:checked ~input[name='point11'][value='1']:checked ~input[name='point12'][value='1']:checked ~input[name='point13'][value='1']:checked ~input[name='point14'][value='1']:checked ~input[name='result1'][value='1']:checked ~.game .level2{display: block;}input[name='point10'][value='1']:checked ~input[name='point11'][value='1']:checked ~input[name='point12'][value='1']:checked ~input[name='point13'][value='1']:checked ~input[name='point14'][value='1']:checked ~input[name='result1'][value='0']:checked ~.game .level1 .results-good {display: block;}input[name='point10'][value='1']:checked ~input[name='point11'][value='1']:checked ~input[name='point12'][value='1']:checked ~input[name='point13'][value='1']:checked ~input[name='point14'][value='1']:checked ~input[name='result1'][value='1']:checked ~.game .level1 .results-good {display: none;}
+        <style>input[name='point10'][value='1']:checked ~input[name='point11'][value='1']:checked ~input[name='point12'][value='1']:checked ~input[name='point13'][value='1']:checked ~input[name='point14'][value='1']:checked ~input[name='result1'][value='1']:checked ~.game .level1{display: none!important;}input[name='point10'][value='1']:checked ~input[name='point11'][value='1']:checked ~input[name='point12'][value='1']:checked ~input[name='point13'][value='1']:checked ~input[name='point14'][value='1']:checked ~input[name='result1'][value='1']:checked ~.game .level2{display: block;}input[name='point10'][value='1']:checked ~input[name='point11'][value='1']:checked ~input[name='point12'][value='1']:checked ~input[name='point13'][value='1']:checked ~input[name='point14'][value='1']:checked ~input[name='result1'][value='0']:checked ~.game .level1 .completed {display: block;}input[name='point10'][value='1']:checked ~input[name='point11'][value='1']:checked ~input[name='point12'][value='1']:checked ~input[name='point13'][value='1']:checked ~input[name='point14'][value='1']:checked ~input[name='result1'][value='1']:checked ~.game .level1 .completed {display: none;}
         </style>
-        <div class="results">
+        <div class="gameover">
           <div class="title">Game Over</div><a href="./index.html" class="restart">restart</a>
         </div>
-        <div class="results-good">
+        <div class="completed">
           <div class="title">level 1 complete!</div>
           <label for="result1" class="result1">next</label>
         </div>
@@ -180,47 +182,47 @@
         <div style="width:220px;height:20px;top:80px;right:60px" class="block35"></div>
         <div style="width:220px;height:20px;top:200px;right:60px" class="block36"></div>
         <label for="point20" style="left:630px;top:535px" class="point20"></label>
-        <style>input[name='point20'][value='1']:checked ~ .game [class^='point20']::after {transform: scale(1);}
+        <style>input[name='point20'][value='1']:checked ~ .game [class='point20']::after {transform: scale(1);}
         </style>
         <label for="point21" style="left:855px;top:335px" class="point21"></label>
-        <style>input[name='point21'][value='1']:checked ~ .game [class^='point21']::after {transform: scale(1);}
+        <style>input[name='point21'][value='1']:checked ~ .game [class='point21']::after {transform: scale(1);}
         </style>
         <label for="point22" style="left:640px;top:335px" class="point22"></label>
-        <style>input[name='point22'][value='1']:checked ~ .game [class^='point22']::after {transform: scale(1);}
+        <style>input[name='point22'][value='1']:checked ~ .game [class='point22']::after {transform: scale(1);}
         </style>
         <label for="point23" style="left:855px;top:430px" class="point23"></label>
-        <style>input[name='point23'][value='1']:checked ~ .game [class^='point23']::after {transform: scale(1);}
+        <style>input[name='point23'][value='1']:checked ~ .game [class='point23']::after {transform: scale(1);}
         </style>
         <label for="point24" style="left:65px;top:110px" class="point24"></label>
-        <style>input[name='point24'][value='1']:checked ~ .game [class^='point24']::after {transform: scale(1);}
+        <style>input[name='point24'][value='1']:checked ~ .game [class='point24']::after {transform: scale(1);}
         </style>
         <label for="point25" style="left:500px;top:205px" class="point25"></label>
-        <style>input[name='point25'][value='1']:checked ~ .game [class^='point25']::after {transform: scale(1);}
+        <style>input[name='point25'][value='1']:checked ~ .game [class='point25']::after {transform: scale(1);}
         </style>
         <label for="point26" style="left:420px;top:60px" class="point26"></label>
-        <style>input[name='point26'][value='1']:checked ~ .game [class^='point26']::after {transform: scale(1);}
+        <style>input[name='point26'][value='1']:checked ~ .game [class='point26']::after {transform: scale(1);}
         </style>
         <label for="point27" style="left:860px;top:135px" class="point27"></label>
-        <style>input[name='point27'][value='1']:checked ~ .game [class^='point27']::after {transform: scale(1);}
+        <style>input[name='point27'][value='1']:checked ~ .game [class='point27']::after {transform: scale(1);}
         </style>
         <label for="point28" style="left:30px;top:525px" class="point28"></label>
-        <style>input[name='point28'][value='1']:checked ~ .game [class^='point28']::after {transform: scale(1);}
+        <style>input[name='point28'][value='1']:checked ~ .game [class='point28']::after {transform: scale(1);}
         </style>
         <label for="point29" style="left:30px;top:325px" class="point29"></label>
-        <style>input[name='point29'][value='1']:checked ~ .game [class^='point29']::after {transform: scale(1);}
+        <style>input[name='point29'][value='1']:checked ~ .game [class='point29']::after {transform: scale(1);}
         </style>
         <label for="point210" style="left:200px;top:425px" class="point210"></label>
-        <style>input[name='point210'][value='1']:checked ~ .game [class^='point210']::after {transform: scale(1);}
+        <style>input[name='point210'][value='1']:checked ~ .game [class='point210']::after {transform: scale(1);}
         </style>
         <label for="point211" style="left:310px;top:350px" class="point211"></label>
-        <style>input[name='point211'][value='1']:checked ~ .game [class^='point211']::after {transform: scale(1);}
+        <style>input[name='point211'][value='1']:checked ~ .game [class='point211']::after {transform: scale(1);}
         </style>
-        <style>input[name='point20'][value='1']:checked ~input[name='point21'][value='1']:checked ~input[name='point22'][value='1']:checked ~input[name='point23'][value='1']:checked ~input[name='point24'][value='1']:checked ~input[name='point25'][value='1']:checked ~input[name='point26'][value='1']:checked ~input[name='point27'][value='1']:checked ~input[name='point28'][value='1']:checked ~input[name='point29'][value='1']:checked ~input[name='point210'][value='1']:checked ~input[name='point211'][value='1']:checked ~input[name='result2'][value='1']:checked ~.game .level2{display: none!important;}input[name='point20'][value='1']:checked ~input[name='point21'][value='1']:checked ~input[name='point22'][value='1']:checked ~input[name='point23'][value='1']:checked ~input[name='point24'][value='1']:checked ~input[name='point25'][value='1']:checked ~input[name='point26'][value='1']:checked ~input[name='point27'][value='1']:checked ~input[name='point28'][value='1']:checked ~input[name='point29'][value='1']:checked ~input[name='point210'][value='1']:checked ~input[name='point211'][value='1']:checked ~input[name='result2'][value='1']:checked ~.game .level3{display: block;}input[name='point20'][value='1']:checked ~input[name='point21'][value='1']:checked ~input[name='point22'][value='1']:checked ~input[name='point23'][value='1']:checked ~input[name='point24'][value='1']:checked ~input[name='point25'][value='1']:checked ~input[name='point26'][value='1']:checked ~input[name='point27'][value='1']:checked ~input[name='point28'][value='1']:checked ~input[name='point29'][value='1']:checked ~input[name='point210'][value='1']:checked ~input[name='point211'][value='1']:checked ~input[name='result2'][value='0']:checked ~.game .level2 .results-good {display: block;}input[name='point20'][value='1']:checked ~input[name='point21'][value='1']:checked ~input[name='point22'][value='1']:checked ~input[name='point23'][value='1']:checked ~input[name='point24'][value='1']:checked ~input[name='point25'][value='1']:checked ~input[name='point26'][value='1']:checked ~input[name='point27'][value='1']:checked ~input[name='point28'][value='1']:checked ~input[name='point29'][value='1']:checked ~input[name='point210'][value='1']:checked ~input[name='point211'][value='1']:checked ~input[name='result2'][value='1']:checked ~.game .level2 .results-good {display: none;}
+        <style>input[name='point20'][value='1']:checked ~input[name='point21'][value='1']:checked ~input[name='point22'][value='1']:checked ~input[name='point23'][value='1']:checked ~input[name='point24'][value='1']:checked ~input[name='point25'][value='1']:checked ~input[name='point26'][value='1']:checked ~input[name='point27'][value='1']:checked ~input[name='point28'][value='1']:checked ~input[name='point29'][value='1']:checked ~input[name='point210'][value='1']:checked ~input[name='point211'][value='1']:checked ~input[name='result2'][value='1']:checked ~.game .level2{display: none!important;}input[name='point20'][value='1']:checked ~input[name='point21'][value='1']:checked ~input[name='point22'][value='1']:checked ~input[name='point23'][value='1']:checked ~input[name='point24'][value='1']:checked ~input[name='point25'][value='1']:checked ~input[name='point26'][value='1']:checked ~input[name='point27'][value='1']:checked ~input[name='point28'][value='1']:checked ~input[name='point29'][value='1']:checked ~input[name='point210'][value='1']:checked ~input[name='point211'][value='1']:checked ~input[name='result2'][value='1']:checked ~.game .level3{display: block;}input[name='point20'][value='1']:checked ~input[name='point21'][value='1']:checked ~input[name='point22'][value='1']:checked ~input[name='point23'][value='1']:checked ~input[name='point24'][value='1']:checked ~input[name='point25'][value='1']:checked ~input[name='point26'][value='1']:checked ~input[name='point27'][value='1']:checked ~input[name='point28'][value='1']:checked ~input[name='point29'][value='1']:checked ~input[name='point210'][value='1']:checked ~input[name='point211'][value='1']:checked ~input[name='result2'][value='0']:checked ~.game .level2 .completed {display: block;}input[name='point20'][value='1']:checked ~input[name='point21'][value='1']:checked ~input[name='point22'][value='1']:checked ~input[name='point23'][value='1']:checked ~input[name='point24'][value='1']:checked ~input[name='point25'][value='1']:checked ~input[name='point26'][value='1']:checked ~input[name='point27'][value='1']:checked ~input[name='point28'][value='1']:checked ~input[name='point29'][value='1']:checked ~input[name='point210'][value='1']:checked ~input[name='point211'][value='1']:checked ~input[name='result2'][value='1']:checked ~.game .level2 .completed {display: none;}
         </style>
-        <div class="results">
+        <div class="gameover">
           <div class="title">Game Over</div><a href="./index.html" class="restart">restart</a>
         </div>
-        <div class="results-good">
+        <div class="completed">
           <div class="title">Well done!<br> You completed all levels!</div><a href="./index.html" class="restart">restart</a>
         </div>
       </div>
@@ -229,7 +231,8 @@
     <input type="radio" name="welcome" value="1" id="welcome">
     <div class="welcome">
       <div class="welcome-title">hoverGame</div>
-      <label for="welcome">start</label>
+      <label for="info" class="info">info</label>
+      <label for="welcome" class="start">start</label>
     </div>
   </div>
   <script src="./scripts/main.js"></script>

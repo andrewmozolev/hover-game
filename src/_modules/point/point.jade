@@ -30,20 +30,20 @@ mixin points(num)
     each val, index in site.data.levels[num].points
       != 'input[name=\'point' + num + index + '\'][value=\'1\']:checked ~'
     != 'input[name=\'result' + num + '\'][value=\'0\']:checked ~'
-    !='.game .level' + num + ' .results-good {'
+    !='.game .level' + num + ' .completed {'
     !=  'display: block;'
     !='}'
 
     each val, index in site.data.levels[num].points
       != 'input[name=\'point' + num + index + '\'][value=\'1\']:checked ~'
     != 'input[name=\'result' + num + '\'][value=\'1\']:checked ~'
-    !='.game .level' + num + ' .results-good {'
+    !='.game .level' + num + ' .completed {'
     !=  'display: none;'
     !='}'
 
 mixin point(pointName, x, y)
   label(class=pointName, for=pointName, style={left:x + 'px', top:y + 'px'})
   style
-    != 'input[name=\'' + pointName + '\'][value=\'1\']:checked ~ .game [class^=\'' + pointName + '\']::after {'
+    != 'input[name=\'' + pointName + '\'][value=\'1\']:checked ~ .game [class=\'' + pointName + '\']::after {'
     !=  'transform: scale(1);'
     != '}'
