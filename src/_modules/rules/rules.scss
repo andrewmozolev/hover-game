@@ -1,0 +1,54 @@
+// rules styles
+.rules {
+  position: absolute;
+  top: 650px;
+  left: 50%;
+  transform: translateX(calc(-50% - 150px));
+  color: #333;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 700;
+  cursor: $cursorCircleHover;
+  transition: all 0.3s ease-out;
+
+  .welcome & {
+    animation-name: appear;
+    animation-duration: 1.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in;
+  }
+
+  .game:hover ~ & {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  input[name='welcome'][value='1']:checked ~ .welcome & {
+    color: #999;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .rules-list {
+    display: none;
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    width: 300px;
+    transform: translate(-50%, -100px);
+    padding: 10px 20px;
+    box-shadow: 1px 1px 5px #999;
+    list-style: none;
+    text-transform: none;
+
+    .rule {
+      font-size: 18px;
+    }
+  }
+
+  &:hover .rules-list {
+    display: block;
+  }
+}

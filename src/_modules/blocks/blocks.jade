@@ -1,0 +1,25 @@
+mixin blocks(i)
+  each block, blockIndex in site.data.levels[i].blocks
+    +block(block, blockIndex)
+
+mixin block(blockData, i)
+  -
+    var blockClass = 'block' + i;
+    var style = {
+      width: blockData.width,
+      height: blockData.height
+    };
+    if (blockData.top) {
+      style.top = blockData.top;
+    }
+    if (blockData.left) {
+      style.left = blockData.left;
+    }
+    if (blockData.right) {
+      style.right = blockData.right;
+    }
+    if (blockData.bottom) {
+      style.bottom = blockData.bottom;
+    }
+
+  div(class=blockClass, style=style)

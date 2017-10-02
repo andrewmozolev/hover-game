@@ -9,6 +9,7 @@ $cursorCircleHover: url('../images/circle-dark-gray.png') 10 10, crosshair;
 @import '../_modules/point/point';
 @import '../_modules/result/result';
 @import '../_modules/welcome/welcome';
+@import '../_modules/rules/rules';
 @import '../_modules/gameover/gameover';
 @import '../_modules/completed/completed';
 
@@ -94,12 +95,4 @@ input {
   margin-bottom: 10px;
   color: #333;
   flex-shrink: 0;
-
-  //@media (max-width: 1439px) {
-  //  display: none;
-  //}
-  //
-  //@media (max-height: 820px) {
-  //  display: none;
-  //}
 }

@@ -5,6 +5,7 @@ mixin completed(index, isLastLevel)
       a.restart(href='./index.html') restart
     else
       .title!= 'level ' + index + ' complete!'
+      +rules()
       +resultLabel('result' + index)
 
 

@@ -62,7 +62,6 @@
     }
   }
 
-  label.info,
   label.start {
     position: absolute;
     top: 650px;
@@ -88,13 +87,8 @@
 
     input[name='welcome'][value='1']:checked ~ & {
       color: #999;
-      //transform: translateX(-50%) scale(0);
       opacity: 0;
       visibility: hidden;
     }
-  }
-
-  label.info {
-    transform: translateX(calc(-50% - 150px));
   }
 }
